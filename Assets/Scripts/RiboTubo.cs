@@ -7,7 +7,6 @@ public class RiboTubo : MonoBehaviour
     [SerializeField] float duracao = 3;
     [SerializeField] public KeyCode tecla;
 
-
     public void Ritmo(float velocidadeDoMovimento)
     {
         //force mode 2D 
@@ -22,17 +21,11 @@ public class RiboTubo : MonoBehaviour
         {
             Debug.Log("tecla correta");
             Destroy(gameObject);
-
-
-
         }
 
         else 
         {
             Debug.Log("tecla xxx");
-
-
-        }
-    
+        }    
     }
 }

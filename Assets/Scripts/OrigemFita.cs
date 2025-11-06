@@ -2,10 +2,6 @@ using UnityEngine;
 
 public class OrigemFita : MonoBehaviour
 {
-   
-
-    
-    
     [SerializeField] RiboTubo prefabTuboC;
     [SerializeField] RiboTubo prefabTuboG;
     [SerializeField] RiboTubo prefabTuboT;
@@ -14,19 +10,13 @@ public class OrigemFita : MonoBehaviour
     [SerializeField] Transform trPontoDeSaida;
     RiboTubo tuboAtual;
     
-
-
-   
-
-
     public void TeclaA ()
     {
         tuboAtual = Instantiate(
                  prefabTuboA,
                  trPontoDeSaida.position,
                  trPontoDeSaida.rotation);
-        tuboAtual.Ritmo(velocidadeDoMovimento);
-        
+        tuboAtual.Ritmo(velocidadeDoMovimento);        
     }
 
     public void RiboG ()
@@ -36,9 +26,6 @@ public class OrigemFita : MonoBehaviour
                  trPontoDeSaida.position,
                  trPontoDeSaida.rotation);
         tuboAtual.Ritmo(velocidadeDoMovimento);
-
-
-        
     }
 
     public void RiboC ()
@@ -48,7 +35,6 @@ public class OrigemFita : MonoBehaviour
                  trPontoDeSaida.position,
                  trPontoDeSaida.rotation);
         tuboAtual.Ritmo(velocidadeDoMovimento);
-
     }
 
     public void RiboT()
@@ -58,8 +44,5 @@ public class OrigemFita : MonoBehaviour
                  trPontoDeSaida.position,
                  trPontoDeSaida.rotation);
         tuboAtual.Ritmo(velocidadeDoMovimento);
-
     }
-
-
 }   

@@ -36,9 +36,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiboTuboG
       objectReference: {fileID: 0}
+    - target: {fileID: 4516744812043837282, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516744812043837282, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
+      propertyPath: m_TagString
+      value: Ribosomos
+      objectReference: {fileID: 0}
     - target: {fileID: 6784544240980892112, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
       propertyPath: tecla
       value: 283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473746810431074316, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8779567371710763262, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
       propertyPath: m_LocalPosition.x

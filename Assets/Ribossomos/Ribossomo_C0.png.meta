@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ribossomo_C0_0: -1181349196872480951
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
