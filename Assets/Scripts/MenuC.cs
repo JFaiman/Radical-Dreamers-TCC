@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menuc : MonoBehaviour
 {
     [SerializeField] GameObject telaInicial;
-    [SerializeField] GameObject telaOpcoes;
+    [SerializeField] GameObject telaMenu;
 
 
     
@@ -17,7 +19,7 @@ public class Menuc : MonoBehaviour
     void HideUI()
     { 
         telaInicial.SetActive(false);
-        telaOpcoes.SetActive(false);
+        telaMenu.SetActive(false);
     }
 
     private void Update()
@@ -25,13 +27,13 @@ public class Menuc : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             HideUI();
-            telaOpcoes.SetActive(true);
+            telaMenu.SetActive(true);
         }
     }
 
     public void Btn_Comeco()
     {
-        Debug.Log("Liga Jogo");
+        SceneManager.LoadScene("Story");
     }
 
     public void Btn_Opcoes()
@@ -41,6 +43,6 @@ public class Menuc : MonoBehaviour
 
     public void Btn_Sair()
     {
-
+        Application.Quit();
     }
 }
