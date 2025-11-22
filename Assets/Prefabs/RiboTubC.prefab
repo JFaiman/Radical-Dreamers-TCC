@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6784544240980892112, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
       propertyPath: tecla
-      value: 284
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7473746810431074316, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
       propertyPath: m_Layer

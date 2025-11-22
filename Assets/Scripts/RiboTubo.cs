@@ -6,6 +6,7 @@ public class RiboTubo : MonoBehaviour
     [SerializeField] Transform tr;
     [SerializeField] float duracao = 3;
     [SerializeField] public KeyCode tecla;
+    bool hit;
 
     public void Ritmo(float velocidadeDoMovimento)
     {
@@ -15,17 +16,22 @@ public class RiboTubo : MonoBehaviour
         Destroy(gameObject, duracao);
     }
 
-    public void VerificarImput(KeyCode input)
+    public bool VerificarImput(KeyCode input)
     {
         if (input == tecla)
         {
             Debug.Log("tecla correta");
-            Destroy(gameObject);
+            hit = true;
+            //Destroy(gameObject);
+            this.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            this.GetComponentInChildren<BoxCollider2D>().enabled = false;
         }
 
         else 
         {
-            Debug.Log("tecla xxx");
-        }    
+            //Debug.Log("tecla xxx");
+            hit = false;
+        }
+        return hit;
     }
 }

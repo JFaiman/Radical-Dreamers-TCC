@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6784544240980892112, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
       propertyPath: tecla
-      value: 282
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 6784544240980892112, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
       propertyPath: duracao

@@ -5,45 +5,65 @@ public class AreaDeColisao : MonoBehaviour
     [SerializeField] Transform tr;
     [SerializeField] Collider2D[] colisoresPorPerto;
     [SerializeField] float raioDeDeteccao = 2;
+    [SerializeField] int vida = 3;
+    bool acertou;
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1)) 
+        if (Input.GetKeyDown(KeyCode.A)) 
         {
-            VerificarArea(KeyCode.F1);
+            VerificarArea(KeyCode.A);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.F2))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            VerificarArea(KeyCode.F2);
+            VerificarArea(KeyCode.S);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.F3))
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            VerificarArea(KeyCode.F3);
+            VerificarArea(KeyCode.D);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.F4))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            VerificarArea(KeyCode.F4);
+            VerificarArea(KeyCode.F);
 
+        }
+        if(vida <= 0)
+        {
+            Debug.Log("perdeu");
         }
     }
     void VerificarArea(KeyCode input)
     {       
         colisoresPorPerto = Physics2D.OverlapCircleAll(tr.position, raioDeDeteccao);
 
-        foreach (Collider2D colisor in colisoresPorPerto) 
+        if(colisoresPorPerto.Length == 0)
         {
-            
+            vida--;
+        }
+
+        foreach (Collider2D colisor in colisoresPorPerto)
+        {
+
             if (colisor.gameObject.GetComponentInParent<RiboTubo>())
             {
-                colisor.gameObject.GetComponentInParent<RiboTubo>().VerificarImput(input);
-            }           
-        }        
+                acertou = colisor.gameObject.GetComponentInParent<RiboTubo>().VerificarImput(input);
+            }
+            if (!acertou)
+            {
+                vida--;
+            }
+        }
+    }
+
+    public void PerderVida()
+    {
+        vida--;
     }
 
     private void OnDrawGizmos()
