@@ -21,6 +21,7 @@ public class StoryScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            //tocar som passar slide
             if (j == i -1 && before)
             {
                 SceneManager.LoadScene("Gameplay");

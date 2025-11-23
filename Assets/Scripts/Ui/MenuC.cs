@@ -6,6 +6,8 @@ public class Menuc : MonoBehaviour
 {
     [SerializeField] GameObject telaInicial;
     [SerializeField] GameObject telaMenu;
+    [SerializeField] GameObject telaOpcoes;
+    [SerializeField] GameObject telaCreditos;
 
 
     
@@ -20,6 +22,8 @@ public class Menuc : MonoBehaviour
     { 
         telaInicial.SetActive(false);
         telaMenu.SetActive(false);
+        telaOpcoes.SetActive(false);
+        telaCreditos.SetActive(false);
     }
 
     private void Update()
@@ -38,11 +42,24 @@ public class Menuc : MonoBehaviour
 
     public void Btn_Opcoes()
     {
+        HideUI();
+        telaOpcoes.SetActive(true);
+    }
 
+    public void Btn_Creditos()
+    {
+        HideUI();
+        telaCreditos.SetActive(true);
     }
 
     public void Btn_Sair()
     {
         Application.Quit();
+    }
+
+    public void Btn_Voltar()
+    {
+        HideUI();
+        telaMenu.SetActive(true);
     }
 }

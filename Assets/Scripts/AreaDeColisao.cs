@@ -6,6 +6,7 @@ public class AreaDeColisao : MonoBehaviour
     [SerializeField] Collider2D[] colisoresPorPerto;
     [SerializeField] float raioDeDeteccao = 2;
     [SerializeField] int vida = 3;
+    [SerializeField] PauseMenu menu;
     bool acertou;
     
     void Update()
@@ -35,7 +36,7 @@ public class AreaDeColisao : MonoBehaviour
         }
         if(vida <= 0)
         {
-            Debug.Log("perdeu");
+            menu.Perdeu();
         }
     }
     void VerificarArea(KeyCode input)

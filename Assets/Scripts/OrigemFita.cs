@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OrigemFita : MonoBehaviour
 {
@@ -44,5 +45,10 @@ public class OrigemFita : MonoBehaviour
                  trPontoDeSaida.position,
                  trPontoDeSaida.rotation);
         tuboAtual.Ritmo(velocidadeDoMovimento);
+    }
+
+    public void Ganhou()
+    {
+        SceneManager.LoadScene("StoryAfter");
     }
 }   
