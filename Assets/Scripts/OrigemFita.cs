@@ -49,6 +49,7 @@ public class OrigemFita : MonoBehaviour
 
     public void Ganhou()
     {
-        SceneManager.LoadScene("Story");
+        //SceneManager.LoadScene("Story");
+        SceneManager.LoadScene("Menu");
     }
 }   
