@@ -8,17 +8,20 @@ public class UiHpController : MonoBehaviour
     public void UpdateUI(int hpNumber)
     {
         i = 1;
-        foreach(GameObject show in Hp)
+        if (hpNumber <= 5)
         {
-            if(i <= hpNumber)
+            foreach (GameObject show in Hp)
             {
-                show.SetActive(true);
+                if (i <= hpNumber)
+                {
+                    show.SetActive(true);
+                }
+                else
+                {
+                    show.SetActive(false);
+                }
+                i++;
             }
-            else
-            {
-                show.SetActive(false);
-            }
-            i++;
         }
     }
 }

@@ -16,8 +16,10 @@ public class AreaDeColisao : MonoBehaviour
     [SerializeField] ParticleSystem particlePerfect;
     [SerializeField] ParticleSystem particleGood;
     [SerializeField] ParticleSystem particleBad;
+    [SerializeField] int amountOfTimeToRestoreHp = 5;
     bool acertou;
     float distance;
+    int hpRestorer = 0;
     FMODUnity.StudioEventEmitter emitter;
 
     private void Start()
@@ -107,6 +109,13 @@ public class AreaDeColisao : MonoBehaviour
                     Instantiate(particleBad, colisor.gameObject.transform);
                 }
                 emitter.SetParameter("On_Off", 1);
+                hpRestorer++;
+                if (vida < 5 && hpRestorer == amountOfTimeToRestoreHp)
+                {
+                   vida++;
+                   hpRestorer = 0;
+                }                
+                UiHpController.UpdateUI(vida);
             }
             else
             {
@@ -122,6 +131,7 @@ public class AreaDeColisao : MonoBehaviour
         emitter.SetParameter("On_Off", 0);
         vida--;
         UiHpController.UpdateUI(vida);
+        hpRestorer = 0;
     }
 
     private void OnDrawGizmos()

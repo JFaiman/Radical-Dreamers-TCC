@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 0f;
         LooseScreen.SetActive(true);
+        emitter.Stop();
     }
     public void Btn_Resume()
     {
