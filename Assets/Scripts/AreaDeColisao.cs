@@ -16,6 +16,7 @@ public class AreaDeColisao : MonoBehaviour
     [SerializeField] ParticleSystem particlePerfect;
     [SerializeField] ParticleSystem particleGood;
     [SerializeField] ParticleSystem particleBad;
+    [SerializeField] ParticleManager particleManager;
     [SerializeField] int amountOfTimeToRestoreHp = 5;
     bool acertou;
     float distance;
@@ -97,11 +98,14 @@ public class AreaDeColisao : MonoBehaviour
                 {
                     score.AddScore(amountToAddOnGreat);
                     Instantiate(particlePerfect, colisor.gameObject.transform);
+                    //particleManager.EmitParticles(1, colisor.gameObject.transform.position);
+                    
                 }
                 else if(distance < 0.5)
                 {
                     score.AddScore(amountToAddOnGood);
                     Instantiate(particleGood, colisor.gameObject.transform);
+                    //particleManager.EmitParticles(2, colisor.gameObject.transform.position);
                 }
                 else
                 {
