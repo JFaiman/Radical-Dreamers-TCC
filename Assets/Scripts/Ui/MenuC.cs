@@ -119,7 +119,7 @@ public class Menuc : MonoBehaviour
 
     public void Btn_Jogar2()
     {
-        
+        SceneManager.LoadScene("Insulina");
     }
 
     public void Btn_Jogar3()
@@ -136,6 +136,6 @@ public class Menuc : MonoBehaviour
     public void PlayButtonSound()
     {
         //AudioSource.PlayClipAtPoint(somBotao,this.transform.position);
-        GetComponent<AudioSource>().Play();
+        //GetComponent<AudioSource>().Play();
     }
 }
