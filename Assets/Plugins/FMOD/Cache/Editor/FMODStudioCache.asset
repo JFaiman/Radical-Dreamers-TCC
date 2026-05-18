@@ -111,7 +111,7 @@ MonoBehaviour:
   Path: ../../../Musicas Vini/Build/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639142143628624344
+  lastModified: 639145886621473667
   FileSizes: []
   Exists: 1
 --- !u!114 &-4235156609871714728
@@ -161,6 +161,33 @@ MonoBehaviour:
   lastModified: 639099841634699296
   FileSizes: []
   Exists: 1
+--- !u!114 &-228203096618204277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Bubles
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Bubles
+  Guid:
+    Data1: 394658550
+    Data2: 1250702735
+    Data3: -302944623
+    Data4: -967502314
+  Banks:
+  - {fileID: -6379599002192079881}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10866
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,13 +207,15 @@ MonoBehaviour:
   - {fileID: 1408027489708885719}
   - {fileID: 8645857743812854849}
   - {fileID: -4235156609871714728}
+  - {fileID: 598613310801595204}
+  - {fileID: -228203096618204277}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6379599002192079881}
   StringsBanks:
   - {fileID: 6070294024371576159}
   cacheVersion: 131856
-  cacheTime: 639142143628669755
+  cacheTime: 639145886621533871
   SerializableEventsDict:
   - key: event:/Music_gameplay_insolina_1
     index: 0
@@ -194,6 +223,37 @@ MonoBehaviour:
     index: 1
   - key: event:/Music_gameplay_insulina_de_verdade
     index: 2
+  - key: event:/Music_Menu
+    index: 3
+  - key: event:/SFX_Bubles
+    index: 4
+--- !u!114 &598613310801595204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music_Menu
+  Guid:
+    Data1: 1251450892
+    Data2: 1297588611
+    Data3: -1511085652
+    Data4: -1196146303
+  Banks:
+  - {fileID: -6379599002192079881}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 48039
 --- !u!114 &1408027489708885719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,10 +378,10 @@ MonoBehaviour:
   Path: ../../../Musicas Vini/Build/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639142143628669755
+  lastModified: 639145886621533871
   FileSizes:
   - Name: 
-    Value: 996
+    Value: 1096
   Exists: 1
 --- !u!114 &6998999076769207955
 MonoBehaviour:
