@@ -111,7 +111,7 @@ MonoBehaviour:
   Path: ../../../Musicas Vini/Build/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639145886621473667
+  lastModified: 639154324414987848
   FileSizes: []
   Exists: 1
 --- !u!114 &-4235156609871714728
@@ -142,7 +142,34 @@ MonoBehaviour:
   - {fileID: -6941628259604869888}
   MinDistance: 1
   MaxDistance: 20
-  Length: 145775
+  Length: 146143
+--- !u!114 &-4098712818052093515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Error
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Error
+  Guid:
+    Data1: -656913497
+    Data2: 1160019842
+    Data3: 137419141
+    Data4: -1594404254
+  Banks:
+  - {fileID: -6379599002192079881}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
 --- !u!114 &-917257547195193810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +214,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 10866
+  Length: 1080
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,13 +236,14 @@ MonoBehaviour:
   - {fileID: -4235156609871714728}
   - {fileID: 598613310801595204}
   - {fileID: -228203096618204277}
+  - {fileID: -4098712818052093515}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6379599002192079881}
   StringsBanks:
   - {fileID: 6070294024371576159}
   cacheVersion: 131856
-  cacheTime: 639145886621533871
+  cacheTime: 639154324415043040
   SerializableEventsDict:
   - key: event:/Music_gameplay_insolina_1
     index: 0
@@ -227,6 +255,8 @@ MonoBehaviour:
     index: 3
   - key: event:/SFX_Bubles
     index: 4
+  - key: event:/SFX_Error
+    index: 5
 --- !u!114 &598613310801595204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +283,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 48039
+  Length: 43636
 --- !u!114 &1408027489708885719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +312,7 @@ MonoBehaviour:
   - {fileID: 9060108988350163876}
   MinDistance: 1
   MaxDistance: 20
-  Length: 127008
+  Length: 122531
 --- !u!114 &2912056675772102069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,10 +408,10 @@ MonoBehaviour:
   Path: ../../../Musicas Vini/Build/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639145886621533871
+  lastModified: 639154324415043040
   FileSizes:
   - Name: 
-    Value: 1096
+    Value: 1214
   Exists: 1
 --- !u!114 &6998999076769207955
 MonoBehaviour:
@@ -455,7 +485,7 @@ MonoBehaviour:
   - {fileID: -6833946111273227249}
   MinDistance: 1
   MaxDistance: 20
-  Length: 42879
+  Length: 43745
 --- !u!114 &9060108988350163876
 MonoBehaviour:
   m_ObjectHideFlags: 0

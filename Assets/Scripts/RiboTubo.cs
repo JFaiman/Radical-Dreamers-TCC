@@ -29,6 +29,7 @@ public class RiboTubo : MonoBehaviour
         else 
         {
             //Debug.Log("tecla xxx");
+            this.GetComponentInChildren<BoxCollider2D>().enabled = false;
             hit = false;
         }
         return hit;
