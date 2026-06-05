@@ -14,16 +14,16 @@ public class ParticleManager : MonoBehaviour
         emitParams.position = whereToEmit;
         if(whatToEmit == 1)
         {
-            Great1.Emit(emitParams,22);
+            Great1.Emit(1);
             Great1.Play();
-            Great2.Emit(emitParams,4000);
+            Great2.Emit(4);
             Great2.Play();
         }
         if (whatToEmit == 2)
         {
-            Good1.Emit(emitParams, 22);
+            Good1.Emit(1);
             Good1.Play();
-            Good2.Emit(emitParams, 4000);
+            Good2.Emit(4);
             Good2.Play();
         }
     }

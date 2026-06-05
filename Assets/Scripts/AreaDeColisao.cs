@@ -97,15 +97,15 @@ public class AreaDeColisao : MonoBehaviour
                 if(distance < 0.25)
                 {
                     score.AddScore(amountToAddOnGreat);
-                    Instantiate(particlePerfect, colisor.gameObject.transform);
-                    //particleManager.EmitParticles(1, colisor.gameObject.transform.position);
+                    //Instantiate(particlePerfect, colisor.gameObject.transform);
+                    particleManager.EmitParticles(1, colisor.gameObject.transform.position);
                     
                 }
                 else if(distance < 0.5)
                 {
                     score.AddScore(amountToAddOnGood);
-                    Instantiate(particleGood, colisor.gameObject.transform);
-                    //particleManager.EmitParticles(2, colisor.gameObject.transform.position);
+                    //Instantiate(particleGood, colisor.gameObject.transform);
+                    particleManager.EmitParticles(2, colisor.gameObject.transform.position);
                 }
                 else
                 {
@@ -136,6 +136,7 @@ public class AreaDeColisao : MonoBehaviour
         vida--;
         UiHpController.UpdateUI(vida);
         hpRestorer = 0;
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
     }
 
     private void OnDrawGizmos()

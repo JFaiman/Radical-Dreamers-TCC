@@ -47,6 +47,7 @@ public class Menuc : MonoBehaviour
     {
         HideUI();
         telaMenu.SetActive(true);
+        PlayButtonSound();
     }
 
     public void Btn_Opcoes()
@@ -135,7 +136,6 @@ public class Menuc : MonoBehaviour
 
     public void PlayButtonSound()
     {
-        //AudioSource.PlayClipAtPoint(somBotao,this.transform.position);
-        //GetComponent<AudioSource>().Play();
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
     }
 }
