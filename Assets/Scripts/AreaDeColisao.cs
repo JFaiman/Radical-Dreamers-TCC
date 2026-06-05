@@ -1,49 +1,142 @@
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class AreaDeColisao : MonoBehaviour
 {
     [SerializeField] Transform tr;
     [SerializeField] Collider2D[] colisoresPorPerto;
     [SerializeField] float raioDeDeteccao = 2;
-    
+    [SerializeField] int vida = 3;
+    [SerializeField] PauseMenu menu;
+    [SerializeField] UiHpController UiHpController;
+    [SerializeField] ScoreCounter score;
+    [SerializeField] int amountToAddOnGreat = 3;
+    [SerializeField] int amountToAddOnGood = 2;
+    [SerializeField] int amountToAddOnBad = 1;
+    [SerializeField] ParticleSystem particlePerfect;
+    [SerializeField] ParticleSystem particleGood;
+    [SerializeField] ParticleSystem particleBad;
+    [SerializeField] ParticleManager particleManager;
+    [SerializeField] int amountOfTimeToRestoreHp = 5;
+    bool acertou;
+    float distance;
+    int hpRestorer = 0;
+    FMODUnity.StudioEventEmitter emitter;
+
+    private void Start()
+    {
+        UiHpController.UpdateUI(vida);
+        var target = GameObject.Find("Music starter");
+        emitter = target.GetComponent<FMODUnity.StudioEventEmitter>();
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1)) 
+        if (Input.GetKeyDown(KeyCode.A)) 
         {
-            VerificarArea(KeyCode.F1);
-
+            VerificarArea(KeyCode.A);
         }
 
-        if (Input.GetKeyDown(KeyCode.F2))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            VerificarArea(KeyCode.F2);
-
+            VerificarArea(KeyCode.S);
         }
 
-        if (Input.GetKeyDown(KeyCode.F3))
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            VerificarArea(KeyCode.F3);
-
+            VerificarArea(KeyCode.D);
         }
 
-        if (Input.GetKeyDown(KeyCode.F4))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            VerificarArea(KeyCode.F4);
-
+            VerificarArea(KeyCode.F);
         }
+        if(vida <= 0)
+        {
+            menu.Perdeu();
+        }
+    }
+
+    public void BotaoA()
+    {
+        VerificarArea(KeyCode.A);
+    }
+
+    public void BotaoS()
+    {
+        VerificarArea(KeyCode.S);
+    }
+
+    public void BotaoD()
+    {
+        VerificarArea(KeyCode.D);
+    }
+
+    public void BotaoF()
+    {
+        VerificarArea(KeyCode.F);
     }
     void VerificarArea(KeyCode input)
     {       
         colisoresPorPerto = Physics2D.OverlapCircleAll(tr.position, raioDeDeteccao);
 
-        foreach (Collider2D colisor in colisoresPorPerto) 
+        if(colisoresPorPerto.Length == 0)
         {
-            
+            PerderVida();
+        }
+
+        foreach (Collider2D colisor in colisoresPorPerto)
+        {
+
             if (colisor.gameObject.GetComponentInParent<RiboTubo>())
             {
-                colisor.gameObject.GetComponentInParent<RiboTubo>().VerificarImput(input);
-            }           
-        }        
+                acertou = colisor.gameObject.GetComponentInParent<RiboTubo>().VerificarImput(input);
+            }
+            if (acertou)
+            {
+                distance = Vector3.Distance(this.gameObject.transform.position, colisor.gameObject.transform.position);
+                if(distance < 0.25)
+                {
+                    score.AddScore(amountToAddOnGreat);
+                    //Instantiate(particlePerfect, colisor.gameObject.transform);
+                    particleManager.EmitParticles(1, colisor.gameObject.transform.position);
+                    
+                }
+                else if(distance < 0.5)
+                {
+                    score.AddScore(amountToAddOnGood);
+                    //Instantiate(particleGood, colisor.gameObject.transform);
+                    particleManager.EmitParticles(2, colisor.gameObject.transform.position);
+                }
+                else
+                {
+                    score.AddScore(amountToAddOnBad);
+                    Instantiate(particleBad, colisor.gameObject.transform);
+                }
+                emitter.SetParameter("On_Off", 1);
+                hpRestorer++;
+                if (vida < 5 && hpRestorer == amountOfTimeToRestoreHp)
+                {
+                   vida++;
+                   hpRestorer = 0;
+                }                
+                UiHpController.UpdateUI(vida);
+            }
+            else
+            {
+                PerderVida();
+                score.MissedTheBonus();
+                //emitter.SetParameter("On_Off", 0);
+            }
+        }
+    }
+
+    public void PerderVida()
+    {
+        emitter.SetParameter("On_Off", 0);
+        vida--;
+        UiHpController.UpdateUI(vida);
+        hpRestorer = 0;
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
     }
 
     private void OnDrawGizmos()
