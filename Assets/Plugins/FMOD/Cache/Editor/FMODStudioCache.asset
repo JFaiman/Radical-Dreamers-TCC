@@ -111,9 +111,36 @@ MonoBehaviour:
   Path: ../../../Musicas Vini/Build/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639154324414987848
+  lastModified: 639166505936879603
   FileSizes: []
   Exists: 1
+--- !u!114 &-5230498887576080425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Projector
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Projector
+  Guid:
+    Data1: 1923616942
+    Data2: 1332038295
+    Data3: -1272012148
+    Data4: 650350347
+  Banks:
+  - {fileID: -6379599002192079881}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6023
 --- !u!114 &-4235156609871714728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,13 +264,14 @@ MonoBehaviour:
   - {fileID: 598613310801595204}
   - {fileID: -228203096618204277}
   - {fileID: -4098712818052093515}
+  - {fileID: -5230498887576080425}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6379599002192079881}
   StringsBanks:
   - {fileID: 6070294024371576159}
   cacheVersion: 131856
-  cacheTime: 639154324415043040
+  cacheTime: 639166505936945896
   SerializableEventsDict:
   - key: event:/Music_gameplay_insolina_1
     index: 0
@@ -257,6 +285,8 @@ MonoBehaviour:
     index: 4
   - key: event:/SFX_Error
     index: 5
+  - key: event:/SFX_Projector
+    index: 6
 --- !u!114 &598613310801595204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,10 +438,10 @@ MonoBehaviour:
   Path: ../../../Musicas Vini/Build/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639154324415043040
+  lastModified: 639166505936945896
   FileSizes:
   - Name: 
-    Value: 1214
+    Value: 1254
   Exists: 1
 --- !u!114 &6998999076769207955
 MonoBehaviour:

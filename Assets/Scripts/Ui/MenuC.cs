@@ -20,7 +20,7 @@ public class Menuc : MonoBehaviour
     void Start()
     {
         HideUI();
-        telaInicial.SetActive(true);
+        telaMenu.SetActive(true);
     }
 
     void HideUI()
