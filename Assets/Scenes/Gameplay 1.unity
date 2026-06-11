@@ -1892,6 +1892,7 @@ MonoBehaviour:
   prefabTuboA: {fileID: 2258336637670013940, guid: e7145b6626dea114997f02652bfbb08f, type: 3}
   velocidadeDoMovimento: 3
   trPontoDeSaida: {fileID: 1631618460}
+  sceneToLoad: Pos-Level 1
 --- !u!95 &766988054
 Animator:
   serializedVersion: 7
@@ -2659,7 +2660,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 288042049663751952, guid: 2e614bdcac319c44b8d53bd6ea172acf, type: 3}
+  m_Sprite: {fileID: -7046115386795439533, guid: 9e5d1239163e7cc4ab7db710fa776fa0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3653,7 +3654,7 @@ Transform:
   m_GameObject: {fileID: 1829292152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 1.46, z: 0}
+  m_LocalPosition: {x: 1.34, y: 1.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3703,7 +3704,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6578142331806438071, guid: 76916cf8640a5d543968407ba6bdc85f, type: 3}
+  m_Sprite: {fileID: -6910969315255240921, guid: 6b1e03967ae5e3d4b9f787d39a742955, type: 3}
   m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   m_FlipX: 0
   m_FlipY: 0

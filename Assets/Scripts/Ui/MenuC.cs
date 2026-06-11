@@ -109,18 +109,19 @@ public class Menuc : MonoBehaviour
     public void Btn_Jogar0()
     {
         SlidesManeger.instance.UpdateSlidesToShow(0);
-        //SceneManager.LoadScene("Story");
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Video");
+        //SceneManager.LoadScene("Pre-Tutorial");
+        //SceneManager.LoadScene("Tutorial");
     }
 
     public void Btn_Jogar1()
     {
-        SceneManager.LoadScene("Gameplay 1");
+        SceneManager.LoadScene("Pre-Level 1");
     }
 
     public void Btn_Jogar2()
     {
-        SceneManager.LoadScene("Insulina");
+        SceneManager.LoadScene("Pre-Level 2");
     }
 
     public void Btn_Jogar3()
