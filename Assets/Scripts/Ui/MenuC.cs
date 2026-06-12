@@ -21,6 +21,7 @@ public class Menuc : MonoBehaviour
     {
         HideUI();
         telaMenu.SetActive(true);
+        Time.timeScale = 1.0f;
     }
 
     void HideUI()
@@ -116,12 +117,12 @@ public class Menuc : MonoBehaviour
 
     public void Btn_Jogar1()
     {
-        SceneManager.LoadScene("Pre-Level 1");
+        SceneManager.LoadScene("PreLevel 1");
     }
 
     public void Btn_Jogar2()
     {
-        SceneManager.LoadScene("Pre-Level 2");
+        SceneManager.LoadScene("PreLevel 2");
     }
 
     public void Btn_Jogar3()

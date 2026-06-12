@@ -10,11 +10,11 @@ public class Video : MonoBehaviour
 
     void GoToGame()
     {
-        SceneManager.LoadScene("Pre-Tutorial");
+        SceneManager.LoadScene("PreTutorial");
     }
 
     public void Skip()
     {
-        SceneManager.LoadScene("Pre-Tutorial");
+        SceneManager.LoadScene("PreTutorial");
     }
 }

@@ -9,10 +9,12 @@ public class PersonagemSlides : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+    
+
     public void ShowFirstSlide()
     {
         StoryScript.ShowFirstSlide();
-        this.GetComponent<SpriteRenderer> ().enabled = false;
+        this.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     public void WalkAway()

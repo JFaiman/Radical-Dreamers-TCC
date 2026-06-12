@@ -30,22 +30,22 @@ EditorBuildSettings:
     path: Assets/Scenes/Insulina.unity
     guid: 7077c72c6f702d241b5b92a9c99e0269
   - enabled: 1
-    path: Assets/Scenes/slides/Pre-Tutorial.unity
+    path: Assets/Scenes/slides/PreTutorial.unity
     guid: 2d93fe9b807213040ac1a48c771f6924
   - enabled: 1
-    path: Assets/Scenes/slides/Pos-Level 1.unity
+    path: Assets/Scenes/slides/PosLevel 1.unity
     guid: 6921219d145090547ad3fe932018dc6b
   - enabled: 1
-    path: Assets/Scenes/slides/Pre-Level 1.unity
+    path: Assets/Scenes/slides/PreLevel 1.unity
     guid: 42beb504ba612ee418fbed99f3b2a07b
   - enabled: 1
-    path: Assets/Scenes/slides/Pos-Tutorial.unity
+    path: Assets/Scenes/slides/PosTutorial.unity
     guid: 09ddd8b95ec4fc94baf68e255131f5dc
   - enabled: 1
-    path: Assets/Scenes/slides/Pre-Level 2.unity
+    path: Assets/Scenes/slides/PreLevel 2.unity
     guid: 4009270e5e32aa44aa795927c687798a
   - enabled: 1
-    path: Assets/Scenes/slides/Pos-Level 2.unity
+    path: Assets/Scenes/slides/PosLevel 2.unity
     guid: 3750507ed33cf0040bdbbdb0f4111b4c
   - enabled: 1
     path: Assets/Scenes/slides/Video.unity

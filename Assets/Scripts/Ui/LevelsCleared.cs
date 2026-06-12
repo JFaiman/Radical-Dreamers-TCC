@@ -15,7 +15,7 @@ public class LevelsCleared : MonoBehaviour
         Buttonslevels[0].SetActive(true);
         for (i = 0; i < Buttonslevels.Length; i++)
         {
-            if(ScoreManeger.instance.ReturnScore(i) != 0)
+            if(ScoreManeger.instance.IsThisLvlCleared(i) != 0)
             {
                 Buttonslevels[i+1].SetActive(true);
             }
