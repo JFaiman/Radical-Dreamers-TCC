@@ -110,8 +110,8 @@ public class Menuc : MonoBehaviour
     public void Btn_Jogar0()
     {
         SlidesManeger.instance.UpdateSlidesToShow(0);
-        SceneManager.LoadScene("Video");
-        //SceneManager.LoadScene("Pre-Tutorial");
+        //SceneManager.LoadScene("Video");
+        SceneManager.LoadScene("PreTutorial");
         //SceneManager.LoadScene("Tutorial");
     }
 
