@@ -4,57 +4,58 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-/*public class StoryScript : MonoBehaviour
+public class StoryScript : MonoBehaviour
 {
     [SerializeField] GameObject[] slides;
     int i = 0, j = 0;
-    [SerializeField] bool before = true;
+    [SerializeField] string sceneToLoad;
+    [SerializeField] PersonagemSlides PersonagemSlides;
+    [SerializeField] GameObject nextSlideButton;
 
     int SlideToShow;
     void Start()
     {
-        //singleton q n é destruido entre scenas atuliza o valor para saber o conjunto de sliodes para mostrar na scena
         foreach (GameObject slide in slides)
         {
             slide.SetActive(false);
             i++;
         }
-        slides[0].SetActive(true);
-
-
-        SlideToShow = SlidesManeger.instance.GiveSlideNumber();
+        //slides[0].SetActive(true);
+        nextSlideButton.SetActive(false);
     }
-
-    void Update()
+    public void ShowFirstSlide()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //tocar som passar slide
-            if (j == i -1 && before)
-            {
-                SceneManager.LoadScene("Gameplay");
-            }
-            else if (j == i -1 && !before)
-            {
-                SceneManager.LoadScene("Menu");
-            }
-            if (j < i -1)
-            {
-                slides[j].SetActive(false);
-                slides[j + 1].SetActive(true);
-                j++;
-                GetComponent<AudioSource>().Play();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Escape) && before)
-        {
-            SceneManager.LoadScene("Gameplay");
-        }
+        slides[0].SetActive(true);
+        nextSlideButton.SetActive(true);
+
     }
-}*/
+
+    public void NextSlide()
+    {
+        if (j == i - 1)
+        {
+            slides[j].SetActive(false);
+            //SceneManager.LoadScene(sceneToLoad);
+            PersonagemSlides.WalkAway();
+            nextSlideButton.SetActive(false);
+        }
+        if (j < i - 1)
+        {
+            slides[j].SetActive(false);
+            slides[j + 1].SetActive(true);
+            j++;
+        }
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
+    }
+   
+    public void SkipSlides()
+    {
+        SceneManager.LoadScene(sceneToLoad);
+    }
+}
 
 
-public class StoryScript : MonoBehaviour
+/*public class StoryScript : MonoBehaviour
 {
     [SerializeField] SlideData[] slideData;
     [SerializeField] GameObject test;
@@ -113,4 +114,4 @@ public class StoryScript : MonoBehaviour
                 break;
         }
     }
-}
+}*/

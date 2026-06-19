@@ -20,7 +20,8 @@ public class Menuc : MonoBehaviour
     void Start()
     {
         HideUI();
-        telaInicial.SetActive(true);
+        telaMenu.SetActive(true);
+        Time.timeScale = 1.0f;
     }
 
     void HideUI()
@@ -109,18 +110,19 @@ public class Menuc : MonoBehaviour
     public void Btn_Jogar0()
     {
         SlidesManeger.instance.UpdateSlidesToShow(0);
-        //SceneManager.LoadScene("Story");
-        SceneManager.LoadScene("Tutorial");
+        //SceneManager.LoadScene("Video");
+        SceneManager.LoadScene("PreTutorial");
+        //SceneManager.LoadScene("Tutorial");
     }
 
     public void Btn_Jogar1()
     {
-        SceneManager.LoadScene("Gameplay 1");
+        SceneManager.LoadScene("PreLevel 1");
     }
 
     public void Btn_Jogar2()
     {
-        SceneManager.LoadScene("Insulina");
+        SceneManager.LoadScene("PreLevel 2");
     }
 
     public void Btn_Jogar3()

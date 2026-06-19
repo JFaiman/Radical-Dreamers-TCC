@@ -9,6 +9,8 @@ public class OrigemFita : MonoBehaviour
     [SerializeField] RiboTubo prefabTuboA;
     [SerializeField] float velocidadeDoMovimento = 5;
     [SerializeField] Transform trPontoDeSaida;
+    [SerializeField] string sceneToLoad;
+    [SerializeField] int levelNumber;
     RiboTubo tuboAtual;
     
     public void TeclaA ()
@@ -50,6 +52,7 @@ public class OrigemFita : MonoBehaviour
     public void Ganhou()
     {
         //SceneManager.LoadScene("Story");
-        SceneManager.LoadScene("Menu");
+        ScoreManeger.instance.UpdateLvlCleared(levelNumber);
+        SceneManager.LoadScene(sceneToLoad);
     }
 }   

@@ -1291,6 +1291,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1422,6 +1423,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 519420028}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1923616942
+      Data2: 1332038295
+      Data3: -1272012148
+      Data4: 650350347
+    Path: event:/SFX_Projector
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!224 &561396140 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4682038974276324699, guid: 0d213e0726d86fd418329f2d95389b89, type: 3}
@@ -1860,6 +1892,8 @@ MonoBehaviour:
   prefabTuboA: {fileID: 2258336637670013940, guid: e7145b6626dea114997f02652bfbb08f, type: 3}
   velocidadeDoMovimento: 3
   trPontoDeSaida: {fileID: 1631618460}
+  sceneToLoad: PosLevel 1
+  levelNumber: 1
 --- !u!95 &766988054
 Animator:
   serializedVersion: 7
@@ -2627,7 +2661,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 288042049663751952, guid: 2e614bdcac319c44b8d53bd6ea172acf, type: 3}
+  m_Sprite: {fileID: -7046115386795439533, guid: 9e5d1239163e7cc4ab7db710fa776fa0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2648,10 +2682,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.13, y: -0.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1829292153}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078657538
@@ -3620,12 +3653,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829292152}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 1.46, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.21, y: 1.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 977247869}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1829292154
 SpriteRenderer:
@@ -3671,7 +3704,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6578142331806438071, guid: 76916cf8640a5d543968407ba6bdc85f, type: 3}
+  m_Sprite: {fileID: -6910969315255240921, guid: 6b1e03967ae5e3d4b9f787d39a742955, type: 3}
   m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4274,6 +4307,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8707645103033435778, guid: 2ee5a6be028c2e0459d0970f69fcda72, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8354385690481989177, guid: 91713b20c3b43c947b3f90007f2e3118, type: 3}
     - target: {fileID: 8829227070320988813, guid: 2ee5a6be028c2e0459d0970f69fcda72, type: 3}
       propertyPath: m_Name
       value: Btn_C
@@ -4375,6 +4412,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5462659373646996341, guid: 0d213e0726d86fd418329f2d95389b89, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 800332861932400031, guid: 71eb921d8aa744b4fa4aca6e87656a28, type: 3}
     - target: {fileID: 6281048280197218054, guid: 0d213e0726d86fd418329f2d95389b89, type: 3}
       propertyPath: m_Name
       value: Btn_A
@@ -4392,6 +4433,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1848577810}
     m_Modifications:
+    - target: {fileID: 1230466416231916061, guid: 75ca5dbe4acd64e45b04671e5d0583f5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 326222545527356683, guid: 9eaf0c55f6773064796bac6122b68421, type: 3}
     - target: {fileID: 1924246848222933712, guid: 75ca5dbe4acd64e45b04671e5d0583f5, type: 3}
       propertyPath: m_Name
       value: Btn_U
@@ -4581,6 +4626,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7770952372786581672, guid: 125eecd7120fee44ca41623e7354c439, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4831464816168304575, guid: 996834de7b80fff48bd130b8533b9790, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4597,6 +4646,7 @@ SceneRoots:
   - {fileID: 303349587}
   - {fileID: 1119048185}
   - {fileID: 576866536}
+  - {fileID: 1829292153}
   - {fileID: 977247869}
   - {fileID: 2052847792}
   - {fileID: 129021576}
